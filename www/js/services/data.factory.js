@@ -25,23 +25,35 @@ angular.module('main').factory('dataFactory', ['$http', '$q', function($http, $q
     );
 
     return {
+//        getPetsByRequest : function(){
+//
+//        },
+
         getPets : function(){
             return deferred.promise;
         },
 
-        createTable : function (array) {
+		/*
+		* array - array for converting ([])
+		* columns - count of columns (number)
+		* */
+
+        createTable : function (array, columns) {
             var newArray = [];
             var subArray = [];
+			var currentIndex = 0;
 
             for(var i = 0; i < array.length; i++){
-                subArray.push(array[i])
-                if(i % 2){
+	            currentIndex++;
+                subArray.push(array[i]);
+
+                if(currentIndex % columns == 0){
                     newArray.push(subArray);
                     subArray = [];
                 }
             }
 
-            if(array.length % 2 == 1){
+            if(array.length % columns == 1){
                 newArray.push([array[array.length-1]])
             }
 

@@ -1,6 +1,11 @@
 @font-face {
-    font-family: beauty-serif;
-    src: url(../fonts/beauty-serif.ttf);
+    font-family: Museo100-Regular;
+    src: url(../fonts/Museo100-Regular.woff);
+}
+.bar.bar-stable .title.pets-title{
+	font-family: Museo100-Regular;
+	color:#fff;
+	font-size: 23px;
 }
 .bar-stable.bar.header{
     background-color:#75ac4e;
@@ -9,9 +14,6 @@
     -webkit-box-shadow: -8px 6px 6px -3px rgba(0,0,0,0.78);
     -moz-box-shadow: -8px 6px 6px -3px rgba(0,0,0,0.78);
     box-shadow: -8px 6px 6px -3px rgba(0,0,0,0.78);
-}
-.header h3{
-    color:#fff;
 }
 .logo{
     overflow: auto;
@@ -31,6 +33,8 @@
     border: 2px solid #ccc;
     background: rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+	height: 150px;
+	border-radius: 6px;
 }
 
 .pet-photo-wrap:before{
@@ -71,16 +75,27 @@
 }
 
 .pet-photo-wrap > img {
-    width: 146px;
+    width: 100%;
 }
 .pet-title{
-    font-family: 'beauty-serif';
-    font-size:28px;
-    transform: rotate(30deg);
-    margin-top: 10px;
+    font-family: 'Museo100-Regular';
+    font-size:17px;
+    font-weight: bold;
+    position: absolute;
+    left:25%;
 }
 .pets-content{
-    background: linear-gradient(to top left, #75ac4e, yellow)
+
+
+/*background-image:url('../img/bg.jpg');*/
+/*background-size: 10% 100%;*/
+
+
+
+	background: #EFEFBB; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #EFEFBB , #D4D3DD); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #EFEFBB , #D4D3DD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .col-pet:nth-child(even){
     transform: rotate(2deg);

@@ -1,14 +1,19 @@
 <ion-view class="pets-content">
     <ion-content>
-        <div class="row" ng-repeat="arrayPet in dC.pets | limitTo:30">
-            <div class="col-50 col-pet" ng-repeat="pet in arrayPet">
+        <div class="row" ng-repeat="arrayPet in dC.pets">
+            <div class="col col-pet" ng-repeat="pet in arrayPet">
                 <div class="pet-photo-wrap" data-link="">
                     <div class="pet-photo">
-                        <!--<p class="pet-title">{{pet.pet_name}}</p>-->
                     </div>
                     <img src="{{pet.large_results_photo_url}}">
+	                <span class="pet-title">{{pet.pet_name}}</span>
                 </div>
             </div>
+
+	        <ion-refresher
+			        pulling-text="Pull to refresh..."
+			        on-refresh="dC.doRefresh()">
+	        </ion-refresher>
         </div>
     </ion-content>
 </ion-view>
