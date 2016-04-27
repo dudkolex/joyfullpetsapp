@@ -1,9 +1,14 @@
-angular.module('main').controller('dataCtrl', ['dataFactory','$scope', function(dataFactory, $scope){
+angular.module('main').controller('dataCtrl', ['dataFactory', function(dataFactory, $timeout){
 
-	var	promise = dataFactory.getPets();
+    var promise = dataFactory.getPets();
 
-	promise.then(function(value){
-		this.pets = value;
-		console.log(this.pets);
-	}.bind(this));
+    promise.then(function(value){
+        this.pets = value;
+
+        this.pets = dataFactory.createTable(this.pets);
+    }.bind(this));
+
+    angular.forEach(this.pets, function (value) {
+        value.deg = Math.round(Math.random() * (-5 -5) + 5);
+    });
 }]);

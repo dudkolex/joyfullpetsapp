@@ -24,12 +24,12 @@ angular.module('main', ['ionic'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-	$stateProvider.state('main',{
-		url : '/main',
-		templateUrl : 'templates/pets.html',
-		controller : 'dataCtrl',
-		controllerAs : 'dC'
-	});
+    $stateProvider.state('main',{
+        url : '/main',
+        templateUrl : 'templates/pets.html',
+        controller : 'dataCtrl',
+        controllerAs : 'dC'
+    });
 
-	$urlRouterProvider.otherwise('/main');
+    $urlRouterProvider.otherwise('/main');
 })
