@@ -1,5 +1,6 @@
 <ion-view class="pets-content">
     <ion-content>
+    JFJFJG
         <div class="row" ng-repeat="arrayPet in dC.pets">
             <div class="col col-pet" ng-repeat="pet in arrayPet">
                 <div class="pet-photo-wrap" data-link="">
@@ -9,18 +10,6 @@
 	                <span class="pet-title">{{pet.pet_name}}</span>
                 </div>
             </div>
-
-	        <ion-refresher
-			        pulling-text="Pull to refresh..."
-			        on-refresh="dC.doRefresh()">
-	        </ion-refresher>
         </div>
     </ion-content>
 </ion-view>
-<!--<div class="list card">-->
-    <!--<a class="item item-image item-pet" ng-repeat="pet in dC.pets">-->
-        <!--{{$index}}-->
-        <!--<img src="{{pet.results_photo_url}}" alt="pet.pet_name" title="pet.pet_name">-->
-        <!--{{pet.pet_name}}-->
-    <!--</a>-->
-<!--</div>-->

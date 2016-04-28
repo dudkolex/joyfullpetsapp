@@ -26,7 +26,14 @@ angular.module('main', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('main',{
         url : '/main',
-        templateUrl : 'templates/pets.html',
+        templateUrl : 'templates/main.html',
+        controller : 'dataCtrl',
+        controllerAs : 'dC'
+    });
+
+    $stateProvider.state('search',{
+        url : '/search',
+        templateUrl : 'templates/search.html',
         controller : 'dataCtrl',
         controllerAs : 'dC'
     });
